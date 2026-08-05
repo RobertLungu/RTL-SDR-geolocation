@@ -72,10 +72,3 @@ Flux fisiere:
     cells.csv -> cells_located.csv -> position.geojson -> captures/captureN.html
 
 
-Studiu tehnic
--------------
-
-studiu_geolocalizare.md (si .odt) este un studiu tehnic in romana al ambelor
-conducte. Se regenereaza cu:
-
-    pandoc studiu_geolocalizare.md -o studiu_geolocalizare.odt --reference-doc=studiu_template.odt

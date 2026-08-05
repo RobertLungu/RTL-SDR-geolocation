@@ -1,19 +1,6 @@
 ADS-B - auto-geolocalizarea receptorului
 ========================================
 
-Estimeaza pozitia proprie a receptorului pornind doar de la difuzarile ADS-B ale
-avioanelor din jur (1090 MHz). Este reference-free: nu se pornesc niciodata de la
-coordonatele proprii; se folosesc doar pozitiile avioanelor (global-CPR) si RSSI
-pentru o ajustare de path-loss.
-
-Complet izolata de conducta GSM din folderul parinte.
-
-Avertisment hardware: receptia pe 1090 MHz a dongle-ului RTL2838 este puternic
-degradata, dar nenula. Pe langa avioane reale, dongle-ul emite si fantome de
-zgomot (ICAO false / pozitii imposibile). Verifica fiecare ICAO + pozitie cu un
-tracker live (ex. FlightRadar24) inainte sa te increzi in ea. Precizia actuala a
-fix-ului este de ~12-30 km, limitata de cantitatea de date.
-
 
 Cerinte
 -------
@@ -40,7 +27,7 @@ Comenzile make
 
 Buton reglabil:
 
-    make capture DUR=300     # capturează 5 minute in loc de 10
+    make capture DUR=n     # capturează pentru n secunde, 600 default
 
 
 Utilizare
@@ -66,5 +53,3 @@ Flux fisiere:
     work/csv_raw.csv -> work/tracks_pruned.csv + work/ranging_samples.csv
     -> work/adsb_position.geojson -> captures/captureN.html
 
-Captura bruta (work/csv_raw.csv) sunt date hardware pretioase si NU este stearsa
-de clean; doar clean-all o elimina.
