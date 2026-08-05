@@ -14,8 +14,10 @@ adsb/datasets/
 adsb/backups/
 adsb/captures.zip
 
-# local agent working notes (machine-specific)
-.claude/agent-memory-local/
+# Claude Code project files (not part of the project)
+.claude/
+CLAUDE.md
+adsb/CLAUDE.md
 
 # python
 __pycache__/
