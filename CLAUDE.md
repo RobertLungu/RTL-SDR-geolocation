@@ -19,6 +19,8 @@ Results are displayed on the existing Leaflet map (`map.html`) — reuse it rath
 
 ## Current Project State
 
+- **On GitHub** (as of 2026-08-05): public mono-repo at `git@github.com:RobertLungu/RTL-SDR-geolocation.git`, branch `main`. Now a real git repo. `.gitignore` excludes `.env`, `adsb/{work,datasets,backups}/`, `adsb/captures.zip`, generated `captures/*.html`, and `.claude/agent-memory-local/`. Note: `cells.csv`/`cells_located.csv` ARE committed (contain nearby GSM tower coords → reveals approx location) — the user accepted this.
+- Romanian `README.md` in root (GSM pipeline) and `adsb/README.md` (ADS-B) document all `make` targets + a short tutorial. Keep them in sync if Makefile targets change.
 - ADS-B self-geo pipeline works end-to-end: `adsb/capture.py` → `filter.py` → `locate.py` → `map.html`. Accuracy ~12–30 km, currently data-limited.
 - Hardware caveat: the dongle's 1090 MHz reception is severely degraded but nonzero — it also emits noise phantoms (fake ICAOs / impossible positions). Verify each ICAO+position against a live tracker (e.g. FR24) before trusting it.
 - Next step: capture more aircraft with diverse bearings/altitudes to improve the position fix.
