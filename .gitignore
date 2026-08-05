@@ -1,0 +1,22 @@
+# secrets
+.env
+
+# generated artifacts (GSM pipeline)
+position.geojson
+towers.geojson
+towers.kml
+captures/*.html
+
+# generated artifacts + heavy data (ADS-B pipeline)
+adsb/work/
+adsb/captures/*.html
+adsb/datasets/
+adsb/backups/
+adsb/captures.zip
+
+# local agent working notes (machine-specific)
+.claude/agent-memory-local/
+
+# python
+__pycache__/
+*.pyc

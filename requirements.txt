@@ -1,0 +1,12 @@
+# Python dependencies for the geolocation pipeline.
+#   pip install -r requirements.txt
+#
+# numpy   - required by tools/estimate_position.py (weighted centroid / trilateration)
+# scipy   - optional; if absent, estimate_position.py falls back to a grid search
+#
+# Note: data gathering (tools/grgsm_scanner) additionally needs gr-gsm + an
+# RTL-SDR dongle, installed at the system level (apt: gr-gsm rtl-sdr).
+# The map (tools/make_map_html.py) and geolocation (tools/geolocate_cells.py)
+# use only the Python standard library.
+numpy>=1.21
+scipy>=1.7  # optional
